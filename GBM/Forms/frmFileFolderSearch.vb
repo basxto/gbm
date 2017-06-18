@@ -162,13 +162,14 @@ Public Class frmFileFolderSearch
     Private Sub GetDrives()
         Dim oComboItems As New List(Of KeyValuePair(Of Integer, String))
         Dim iCount As Integer = 0
+        Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
 
         'cboDrive
         cboDrive.ValueMember = "Key"
         cboDrive.DisplayMember = "Value"
 
         oDrives = New List(Of DriveInfo)
-        For Each oDrive As DriveInfo In My.Computer.FileSystem.Drives
+        For Each oDrive As DriveInfo In allDrives
             If oDrive.DriveType = IO.DriveType.Fixed Then
                 oDrives.Add(oDrive)
                 oComboItems.Add(New KeyValuePair(Of Integer, String)(iCount, oDrive.RootDirectory.ToString))
