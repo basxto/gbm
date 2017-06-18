@@ -448,9 +448,9 @@ Public Class frmGameManager
         End If
 
         If bDirty Then
-            btn.Font = New Font(FontFamily.GenericSansSerif, 8.25, FontStyle.Bold)
+            btn.Font = New Font(FontFamily.GenericSansSerif, 8.25f, FontStyle.Bold)
         Else
-            btn.Font = New Font(FontFamily.GenericSansSerif, 8.25, FontStyle.Regular)
+            btn.Font = New Font(FontFamily.GenericSansSerif, 8.25f, FontStyle.Regular)
         End If
     End Sub
 
