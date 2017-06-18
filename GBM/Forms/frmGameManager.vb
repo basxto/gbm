@@ -544,7 +544,7 @@ Public Class frmGameManager
             frm.NewMode = True
             frm.TagList = oTagsToSave
         Else
-            For Each oData In lstGames.SelectedItems
+            For Each oData As KeyValuePair(Of String, String) In lstGames.SelectedItems
                 oApp = DirectCast(AppData(oData.Key), clsGame)
                 sMonitorIDs.Add(oApp.ID)
             Next

@@ -133,7 +133,7 @@ Public Class frmIncludeExclude
         GetAllCheckedNodes(treFiles.Nodes, oCheckedNodes)
 
         lstBuilder.BeginUpdate()
-        For Each oNode In oCheckedNodes
+        For Each oNode As TreeNode In oCheckedNodes
             sItem = oNode.Text
             If oNode.Tag = 1 And optFileTypes.Checked Then
                 sItem = Path.GetExtension(oNode.Text)
